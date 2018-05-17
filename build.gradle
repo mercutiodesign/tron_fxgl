@@ -2,7 +2,7 @@ buildscript {
     ext.kotlin_version = '1.2.41'
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -17,15 +17,19 @@ group 'tron'
 version '0.1'
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
 
 sourceCompatibility = 1.8
+mainClassName = "BasicGameApp"
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile 'com.github.almasb:fxgl:0.5.1'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 

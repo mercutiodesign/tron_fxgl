@@ -64,3 +64,10 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+.project
+.vscode
+bin
+system
+.idea/vcs.xml
+logs
+.settings
